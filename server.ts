@@ -45,7 +45,7 @@ app.post("/login", function (req, res) {
 
   console.log(`Updating session for user ${id}`);
   req.session.userId = id;
-  res.send({ result: "OK", message: "Session updated" });
+  res.send({ result: "OK", userId: id, message: "Session updated" });
 });
 
 const server = http.createServer(app);
